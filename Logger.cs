@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Log
@@ -74,7 +70,6 @@ namespace Log
         {
             lock (LogManager.lockKey)
             {
-                //string fileName = $"Logs/{ LogManager.Loggers.Single(x => x.Value.RichTextBox == _richTextBox).Key }_{DateTime.Now.ToString("dd.MM.yyyy").Replace("/", "_").Replace(@"\", "_").Replace(".", "_")}.txt";
                 string filePath = $"Logs/{Name}_{DateTime.Now.ToString("dd.MM.yyyy").Replace("/", "_").Replace(@"\", "_").Replace(".", "_")}.txt";
                 using (var file = new StreamWriter(filePath, true))
                 {
@@ -87,9 +82,8 @@ namespace Log
 
     public class Logger
     {
-
         private TextFileLogger textFileLogger;
-        public RichTextBoxLogger richTextBoxLogger;
+        public RichTextBoxLogger richTextBoxLogger; 
 
         public Logger(string name, RichTextBox richTextBox = null)
         {

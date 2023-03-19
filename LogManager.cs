@@ -1,11 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
+﻿using System.Collections.Generic;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace Log
 {
@@ -16,7 +10,7 @@ namespace Log
             base.Add(TKey, new Logger(TKey));
         }
     }
-
+    
     public class LogManager
     {
         public static readonly object lockKey = new object();
@@ -32,7 +26,5 @@ namespace Log
         }
 
     }
-
-
 }
 
