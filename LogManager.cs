@@ -1,7 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.IO;
+using System.Windows.Forms;
 
-namespace Log
+namespace StreamWorld.Log
 {
     public class LoggerDictionary<TKey, TValue> : Dictionary<string, Logger>
     {
@@ -14,17 +15,13 @@ namespace Log
     public class LogManager
     {
         public static readonly object lockKey = new object();
-
         public static LoggerDictionary<string, Logger> Loggers = new LoggerDictionary<string, Logger>();
 
         static LogManager()
         {
-            if (!Directory.Exists("Logs"))
-                Directory.CreateDirectory("Logs");
-
             Loggers.Add("Main");
-        }
 
+        }
     }
 }
 
