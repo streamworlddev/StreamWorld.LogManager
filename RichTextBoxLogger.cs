@@ -7,6 +7,7 @@ namespace StreamWorld.Log
     public class RichTextBoxLogger : ICustomLogger
     {
         private RichTextBox richTextBox;
+        public TimeSpan? CleaningInterval = new TimeSpan(0, 0, 0);
         public RichTextBox RichTextBox
         {
             get { return richTextBox; }
@@ -15,15 +16,27 @@ namespace StreamWorld.Log
 
         public Color defaultTextColor = Color.White;
 
-        public RichTextBoxLogger(RichTextBox _richTextBox)
+        public DateTime startedDateTime = DateTime.MinValue;
+
+
+        public RichTextBoxLogger(RichTextBox _richTextBox,TimeSpan? _cleaningInterval = null)
         {
             RichTextBox = _richTextBox;
+            if (_cleaningInterval != null) CleaningInterval = _cleaningInterval;
+            startedDateTime = DateTime.Now;
+
         }
 
         public void Log(string text, params object[] additionalData)
         {
             if (richTextBox != null)
             {
+                if (DateTime.Now  > (startedDateTime + CleaningInterval))
+                {
+                    Clear();
+                    startedDateTime = DateTime.Now;
+                }
+
                 WriteToRichTextBox($"[{DateTime.Now:dd.MM.yyyy HH:mm:ss}] ", Color.Red);
                 WriteToRichTextBox(text + "\n", (additionalData.Length > 0) ? ( (additionalData[0] is Color) ? (Color)additionalData[0] : defaultTextColor ) : defaultTextColor);
             }
