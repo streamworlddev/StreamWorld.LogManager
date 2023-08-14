@@ -9,6 +9,7 @@ namespace StreamWorld.Log
         public void Add(string TKey)
         {
             base.Add(TKey, new Logger(TKey));
+            LogManager.Loggers[TKey].AddCustomLogger(new TextFileLogger(TKey));
         }
     }
     
