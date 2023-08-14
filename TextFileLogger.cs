@@ -11,6 +11,7 @@ namespace StreamWorld.Log
         public TextFileLogger(string id) 
         {
             Name = id;
+            CheckLogDirectory();
         }
         public TextFileLogger(string id,string directory)
         {

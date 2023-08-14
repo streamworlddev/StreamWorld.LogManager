@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.IO;
-using System.Windows.Forms;
+﻿using System.Collections.Generic;
 
 namespace StreamWorld.Log
 {
@@ -14,7 +10,6 @@ namespace StreamWorld.Log
     
         public Logger(string name)
         {
-           
             Name = name;
         }
         public void AddCustomLogger(ICustomLogger customLogger)
