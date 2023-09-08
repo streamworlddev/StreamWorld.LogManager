@@ -7,7 +7,9 @@ namespace StreamWorld.Log
     public class RichTextBoxLogger : ICustomLogger
     {
         private RichTextBox richTextBox;
-        public TimeSpan? CleaningInterval = new TimeSpan(0, 0, 0);
+
+        // Default cleaning interval is 1 day.
+        public TimeSpan? CleaningInterval = new TimeSpan(1, 0, 0, 0);
         public RichTextBox RichTextBox
         {
             get { return richTextBox; }
