@@ -1,4 +1,5 @@
-﻿namespace StreamWorld.Log
+﻿
+namespace StreamWorld.LogManager
 {
     public interface ILogger
     {

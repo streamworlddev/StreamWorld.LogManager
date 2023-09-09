@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9B4E27FF-7F2A-4CBF-82A1-4B70B4E44D03}</ProjectGuid>
+    <ProjectGuid>{75B3DB19-A4AA-4B57-AF96-047358401360}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>StreamWorld.Log</RootNamespace>
-    <AssemblyName>StreamWorld.Log</AssemblyName>
+    <RootNamespace>StreamWorld.LogManager</RootNamespace>
+    <AssemblyName>StreamWorld.LogManager</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>

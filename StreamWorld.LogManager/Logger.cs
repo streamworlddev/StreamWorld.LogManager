@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace StreamWorld.Log
+namespace StreamWorld.LogManager
 {
 
     public class Logger : ILogger

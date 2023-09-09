@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 
-namespace StreamWorld.Log
+namespace StreamWorld.LogManager
 {
     public class TextFileLogger : ICustomLogger
     {

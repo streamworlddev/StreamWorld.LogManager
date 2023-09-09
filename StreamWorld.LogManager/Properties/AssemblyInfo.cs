@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("StreamWorld.Log")]
+[assembly: AssemblyTitle("StreamWorld.LogManager")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("StreamWorld.Log")]
+[assembly: AssemblyCompany("StreamWorld Development")]
+[assembly: AssemblyProduct("StreamWorld.LogManager")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("9b4e27ff-7f2a-4cbf-82a1-4b70b4e44d03")]
+[assembly: Guid("75b3db19-a4aa-4b57-af96-047358401360")]
 
 // Version information for an assembly consists of the following four values:
 //

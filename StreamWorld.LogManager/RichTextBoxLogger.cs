@@ -2,14 +2,16 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace StreamWorld.Log
+namespace StreamWorld.LogManager
 {
     public class RichTextBoxLogger : ICustomLogger
     {
         private RichTextBox richTextBox;
 
-        // Default cleaning interval is 1 day.
-        public TimeSpan? CleaningInterval = new TimeSpan(1, 0, 0, 0);
+        /// <summary>
+        /// Default cleaning interval is 1 day.
+        /// </summary>
+        public TimeSpan? CleaningInterval = new TimeSpan(1,0, 0, 0);
         public RichTextBox RichTextBox
         {
             get { return richTextBox; }
